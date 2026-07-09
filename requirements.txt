@@ -1,0 +1,21 @@
+# ============================================================
+# Colab 訓練環境（GPU、Python 3.12）— 由 dpo_colab.ipynb 內的
+# %pip install 自行安裝，此處僅作版本紀錄，勿在本機安裝：
+#   trl>=1.0,<2
+#   peft>=0.15
+#   transformers>=4.51
+#   datasets>=3.6
+#   accelerate>=1.0
+#   bitsandbytes>=0.45
+# ============================================================
+# 本機驗證環境（CPU、Python 3.9+、不需 torch）：
+#   python -m venv .venv
+#   .venv\Scripts\python.exe -m pip install -r requirements.txt
+#   .venv\Scripts\python.exe scripts\preview_pairs.py
+# ============================================================
+transformers>=4.51,<5
+datasets>=3.6,<5
+jinja2>=3.1        # apply_chat_template 需要（transformers 未宣告為硬相依）
+nbformat>=5.7      # notebook 結構驗證
+nbconvert>=7.0     # notebook 轉 .py 語法驗證
+ipython>=8.0       # notebook magic 語法轉換（驗證用）

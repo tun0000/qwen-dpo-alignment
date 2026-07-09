@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Jupyter
+.ipynb_checkpoints/
+_check.py
+
+# 訓練產出物
+outputs/
+checkpoints/
+dpo-output/
+runs/
+wandb/
+*.safetensors
+training_curves.png
+
+# HuggingFace 快取（若指到專案內）
+.cache/
+hf_cache/
+
+# OS / 編輯器
+Thumbs.db
+.DS_Store
+.vscode/
+.idea/
