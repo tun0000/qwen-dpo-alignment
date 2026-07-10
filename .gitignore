@@ -27,3 +27,6 @@ Thumbs.db
 .DS_Store
 .vscode/
 .idea/
+
+# 個人筆記，不上傳
+interview_prep.md
