@@ -60,11 +60,13 @@ python -m venv .venv
 prompt / chosen / rejected 字串，並檢查 Qwen chat template 套用是否正確
 （生成標記、EOS 收尾、前綴一致性）。
 
-## 成果
+## 成果（2026-07-11，Colab L4 實測）
 
-- 模型（訓練完成後生效）：`https://huggingface.co/<你的 HF 帳號>/qwen2.5-0.5b-dpo-ultrafeedback`
-  — notebook 會用你的 HF token 自動偵測帳號並推送。
-- Model card 內含：DPO 方法說明、超參數、reward accuracy 曲線圖、before/after 對照範例。
+- **模型**：[steven0226/qwen2.5-0.5b-dpo-ultrafeedback](https://huggingface.co/steven0226/qwen2.5-0.5b-dpo-ultrafeedback)（merged、bf16，推論不需 PEFT）
+- **rewards/accuracies**：最終滾動平均 **0.639**，訓練中後段穩定於 0.65–0.70（隨機基線 0.5）
+- **DPO loss**：0.693（ln 2 理論起點）→ ~0.62；**rewards/margins** 持續擴大至 ~0.25，無 reward hacking 跡象
+- 訓練規模：6000 對、1 epoch、375 steps，L4 上約 25 分鐘
+- Model card 內含：DPO 方法說明、超參數、訓練曲線圖、before/after 對照範例。
 
 ## License
 
